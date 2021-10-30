@@ -37,7 +37,7 @@ const LoginScreen = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container animate__animated animate__zoomIn">
       <h1>Login</h1>
       <hr />
       <div className="row container">

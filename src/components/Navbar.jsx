@@ -1,17 +1,19 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { logout } from "../actions/auth";
+import { cleanPayment } from "../actions/payment";
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const handleLogout = () => {
+    dispatch(cleanPayment());
     dispatch(logout());
   };
   return (
     <nav className="green">
       <div className="nav-wrapper">
-        <span className="brand-logo">Payment Calculator</span>
-        <ul id="nav-mobile" className="right hide-on-med-and-down">
+        <span className="brand-logo left">Payment Calculator</span>
+        <ul id="nav-mobile" className="right">
           <li>
             <button
               onClick={handleLogout}

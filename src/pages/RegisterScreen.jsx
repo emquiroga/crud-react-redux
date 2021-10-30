@@ -40,7 +40,7 @@ const RegisterScreen = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container container animate__animated animate__zoomIn">
       <h1>Register</h1>
       <hr />
       <div className="row container">

@@ -6,11 +6,13 @@ import { useDispatch } from "react-redux";
 
 import { firebase } from "../firebase/config-firebase";
 import { login } from "../actions/auth";
+import { loadData } from "../helpers/loadData";
 
 import AppScreen from "../pages/AppScreen";
 import AuthRouter from "./AuthRouter";
 import PrivateRoutes from "./PrivateRoutes";
 import PublicRoutes from "./PublicRoutes";
+import { readPayments } from "../actions/payment";
 
 const AppRouter = () => {
   const dispatch = useDispatch();
@@ -21,6 +23,8 @@ const AppRouter = () => {
       if (user) {
         dispatch(login(user.uid, user.displayName));
         setLog(true);
+        const paymentData = await loadData(user.uid);
+        dispatch(readPayments(paymentData));
       } else {
         setLog(false);
       }
