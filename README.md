@@ -17,6 +17,6 @@
 
 ### Los métodos de Login y Register que ofrece son vía mail o autentificación con Google Account (en la versión live, esta última no funciona).
 
-### El usuario de prueba es ```js prueba@mail.com``` y la password es ```123456```
+## El usuario de prueba es ```js prueba@mail.com``` y la password es ```123456```
 
 ### Hope you enjoy it!
